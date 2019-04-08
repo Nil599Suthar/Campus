@@ -1,6 +1,6 @@
 package com.example.sutharnil.buggy;
 
-public class Send_request {
+public class Send_request1 {
 
     private String Id;
     private String UId;
@@ -10,7 +10,7 @@ public class Send_request {
     private String uname;
     private double userLat , userLong;
     private String Request_Status;
-    public Send_request(String id, String UId,String uname, String pickpoint, String droppoint, String pessanger,double userLat,double userLong,String request_Status) {
+    public Send_request1(String id, String UId, String uname, String pickpoint, String droppoint, String pessanger, double userLat, double userLong, String request_Status) {
 
         this.UId = UId;
         this.uname=uname;
@@ -22,7 +22,7 @@ public class Send_request {
         this.Request_Status=request_Status;
     }
 
-    public Send_request() {
+    public Send_request1() {
 
     }
 

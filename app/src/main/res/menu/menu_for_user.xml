@@ -3,11 +3,18 @@
       app:popupTheme="@style/Base.ThemeOverlay.AppCompat.Dark"
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+            android:id="@+id/user_alert"
+            android:title="Alerts"
+            android:icon="@drawable/ic_notifications_white_24dp"
+            app:showAsAction="always"/>
     <item android:title="Account"
           android:icon="@drawable/ic_person_black_2"
           app:showAsAction="always"
           android:id="@+id/account"/>
+
     <item android:title="Log out"
-          android:icon="@drawable/ic_reply_all_black_24dp"
+          android:icon="@drawable/ic_exit_to_app_black_24dp"
+          app:showAsAction="always"
           android:id="@+id/logout"/>
 </menu>

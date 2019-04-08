@@ -19,9 +19,7 @@ public class splashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        //notification
-        Intent notificationIntent = new Intent(splashActivity.this, MyService.class);
-        startService(notificationIntent);
+
 
         ImageView iv = (ImageView) findViewById(R.id.iv);
         TextView tv = (TextView) findViewById(R.id.tv);
@@ -42,25 +40,5 @@ public class splashActivity extends AppCompatActivity {
             }
         }, 3000);
     }
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    sleep(3000);
-//                }
-//                catch (InterruptedException e)
-//                {
-//                                    e.printStackTrace();
-//                }
-//                finally {
-//
-//
-//
-//                }
-//
-//            }
-//        }).start();
-//
-//
-//    }
+
 }

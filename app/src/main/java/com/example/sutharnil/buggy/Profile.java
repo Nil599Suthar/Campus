@@ -26,13 +26,14 @@ import java.util.Map;
 
 public class Profile extends Fragment {
 
-        private SharedPreferences sharedPreferences1,sharedPreferences;
+    private SharedPreferences sharedPreferences1,sharedPreferences;
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference1;
     private TextView bgy_no,bgy_name,bgy_sheet,mobile,address,did,dfname,dlname;
     private Switch Switch;
     private String a,b;
+
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
@@ -80,6 +81,12 @@ public class Profile extends Fragment {
                      SharedPreferences.Editor editor=sharedPreferences.edit();
                     editor.putString("on","on");
                     editor.commit();
+
+                    Intent broadcastIntent = new Intent();
+                    broadcastIntent.setAction("restartservice");
+                    broadcastIntent.setClass(getActivity(), BroadCastService.class);
+                    getActivity().sendBroadcast(broadcastIntent);
+
                 }else{
                     Toast.makeText(getContext(), "Offline", Toast.LENGTH_SHORT).show();
                     sharedPreferences = getContext().getSharedPreferences("switch",Context.MODE_PRIVATE);
@@ -91,102 +98,100 @@ public class Profile extends Fragment {
         });
 
 
-        Button update=(Button) view.findViewById(R.id.Btn);
-        Button update1=(Button) view.findViewById(R.id.Btn1);
 
 //bugy information update
 
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                    AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
-                    View view1=inflater.inflate(R.layout.buggyinfo_update,null);
-                alert.setTitle("Buggy Info Update");
-                alert.setView(view1);
-                final EditText No=(EditText)view1.findViewById(R.id.bgyno);
-               final EditText Name=(EditText)view1.findViewById(R.id.bgyname);
-                final EditText Sheet=(EditText)view1.findViewById(R.id.bgysheet);
-                alert.setIcon(R.drawable.ic_logopit_1534081965403);
-
-                alert.setCancelable(false);
-                alert.setPositiveButton("Update", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        if (!No.getText().toString().isEmpty()|| !Name.getText().toString().isEmpty() || !Sheet.getText().toString().isEmpty())
-                        {
-                            if (!No.getText().toString().isEmpty()){
-                                bgy_no.setText(No.getText().toString());
-                            }
-                            if (!Name.getText().toString().isEmpty()){
-                                bgy_name.setText(Name.getText().toString());
-                            }
-                            if (!Sheet.getText().toString().isEmpty()){
-                                bgy_sheet.setText(Sheet.getText().toString());
-                            }
-
-                        }
-                        else {
-                            Toast.makeText(getContext(),"Feel Up Field",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-
-                AlertDialog alertDialog=alert.create();
-                alertDialog.show();
-
-
-
-            }
-        });
+//        update.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                    AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
+//                    View view1=inflater.inflate(R.layout.buggyinfo_update,null);
+//                alert.setTitle("Buggy Info Update");
+//                alert.setView(view1);
+//                final EditText No=(EditText)view1.findViewById(R.id.bgyno);
+//               final EditText Name=(EditText)view1.findViewById(R.id.bgyname);
+//                final EditText Sheet=(EditText)view1.findViewById(R.id.bgysheet);
+//                alert.setIcon(R.drawable.ic_logopit_1534081965403);
+//
+//                alert.setCancelable(false);
+//                alert.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                        if (!No.getText().toString().isEmpty()|| !Name.getText().toString().isEmpty() || !Sheet.getText().toString().isEmpty())
+//                        {
+//                            if (!No.getText().toString().isEmpty()){
+//                                bgy_no.setText(No.getText().toString());
+//                            }
+//                            if (!Name.getText().toString().isEmpty()){
+//                                bgy_name.setText(Name.getText().toString());
+//                            }
+//                            if (!Sheet.getText().toString().isEmpty()){
+//                                bgy_sheet.setText(Sheet.getText().toString());
+//                            }
+//
+//                        }
+//                        else {
+//                            Toast.makeText(getContext(),"Feel Up Field",Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+//
+//
+//                AlertDialog alertDialog=alert.create();
+//                alertDialog.show();
+//
+//
+//
+//            }
+//        });
 
 //driver info update
 
-        update1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                final AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
-                View view1=inflater.inflate(R.layout.personalinfo_update,null);
-                alert.setTitle("Personal Info Upate");
-
-                alert.setView(view1);
-
-                final EditText Mobile=(EditText)view1.findViewById(R.id.mobileno);
-                final EditText Address=(EditText)view1.findViewById(R.id.address);
-                alert.setIcon(R.drawable.ic_person_black_24dp);
-                alert.setCancelable(false);
-
-                alert.setPositiveButton("Update", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        if (!Mobile.getText().toString().isEmpty()|| !Address.getText().toString().isEmpty())
-                        {
-                            if (!Address.getText().toString().isEmpty()){
-                                address.setText(Address.getText().toString());
-
-                            } if (!Mobile.getText().toString().isEmpty()){
-                            mobile.setText(Mobile.getText().toString());
-
-                        }
-
-                        } else {
-                            Toast.makeText(getContext(),"Feel Up Field",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-
-
-                AlertDialog alertDialog=alert.create();
-                alertDialog.show();
-
-
-            }
-        });
+//        update1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                final AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
+//                View view1=inflater.inflate(R.layout.personalinfo_update,null);
+//                alert.setTitle("Personal Info Upate");
+//
+//                alert.setView(view1);
+//
+//                final EditText Mobile=(EditText)view1.findViewById(R.id.mobileno);
+//                final EditText Address=(EditText)view1.findViewById(R.id.address);
+//                alert.setIcon(R.drawable.ic_person_black_24dp);
+//                alert.setCancelable(false);
+//
+//                alert.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                        if (!Mobile.getText().toString().isEmpty()|| !Address.getText().toString().isEmpty())
+//                        {
+//                            if (!Address.getText().toString().isEmpty()){
+//                                address.setText(Address.getText().toString());
+//
+//                            } if (!Mobile.getText().toString().isEmpty()){
+//                            mobile.setText(Mobile.getText().toString());
+//
+//                        }
+//
+//                        } else {
+//                            Toast.makeText(getContext(),"Feel Up Field",Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+//
+//
+//
+//                AlertDialog alertDialog=alert.create();
+//                alertDialog.show();
+//
+//
+//            }
+//        });
 
 
         return view;

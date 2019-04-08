@@ -69,7 +69,7 @@ public class Get_Req_Adapter extends RecyclerView.Adapter<Get_Req_Adapter.MyView
             pickup=(TextView)itemView.findViewById(R.id.pickuppoint);
             drop=(TextView)itemView.findViewById(R.id.droppoint);
             accept=(Button)itemView.findViewById(R.id.accept);
-            decline=(Button)itemView.findViewById(R.id.decline);
+//            decline=(Button)itemView.findViewById(R.id.decline);
 
             accept.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -78,13 +78,13 @@ public class Get_Req_Adapter extends RecyclerView.Adapter<Get_Req_Adapter.MyView
                     Get_Req_Adapter.this.mlistener.onclickAccept(position);
                 }
             });
-            decline.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    Get_Req_Adapter.this.mlistener1.onclickDecline(position);
-                }
-            });
+//            decline.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    int position = getAdapterPosition();
+//                    Get_Req_Adapter.this.mlistener1.onclickDecline(position);
+//                }
+//            });
 
         }
     }

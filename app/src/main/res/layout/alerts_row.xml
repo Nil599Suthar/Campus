@@ -15,87 +15,163 @@
             android:layout_height="wrap_content">
 
         <TextView
-                android:text="Requester :-"
+                android:id="@+id/textView10"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView10" android:layout_marginTop="10dp"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="10dp" android:textStyle="bold" android:textSize="14sp"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/name"
-                app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="10dp"
-                app:layout_constraintHorizontal_bias="0.17" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="10dp" android:hint="Name" android:textStyle="bold" android:textSize="14sp"
-                android:textColor="@android:color/background_dark" android:layout_marginStart="10dp"/>
-        <TextView
-                android:text="Number Of Passangers :-"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView12"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" android:layout_marginStart="10dp"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/passanger"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="10dp"
-                android:hint="Name" app:layout_constraintTop_toBottomOf="@+id/name"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
-                android:layout_marginTop="10dp" app:layout_constraintHorizontal_bias="0.079"
-                android:textColor="@android:color/background_dark" android:textSize="14sp" android:textStyle="bold"
-                android:layout_marginStart="10dp"/>
-        <TextView
-                android:text="Origin :-"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView14"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textStyle="bold" android:textSize="14sp"
-                android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/textView12"
-                android:layout_marginStart="10dp"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/pickuppoint"
-                android:hint="Name"
-                android:textColor="@android:color/background_dark" android:textSize="14sp" android:textStyle="bold"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                app:layout_constraintStart_toEndOf="@+id/textView14"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="8dp" android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/passanger" app:layout_constraintHorizontal_bias="0.0"/>
-        <TextView
-                android:text="Destination :-"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView16"
+                android:layout_marginTop="10dp"
+                android:text="REQUESTER :"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textStyle="bold" android:textSize="14sp"
-                android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/textView14"
-                android:layout_marginStart="10dp"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/droppoint"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
                 android:hint="Name"
-                android:textColor="@android:color/background_dark" android:textSize="14sp" android:textStyle="bold"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.576"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="NUMBER OF PASSANGERS :"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+                android:id="@+id/passanger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:hint="Name"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.247"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="PICK UP :"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+                android:id="@+id/pickuppoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:hint="Name"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.615"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/passanger" />
+
+        <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="DROP :"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+                android:id="@+id/droppoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:hint="Name"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.645"
                 app:layout_constraintStart_toEndOf="@+id/textView16"
-                android:layout_marginStart="10dp" android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/pickuppoint" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="10dp" app:layout_constraintHorizontal_bias="0.007"/>
+                app:layout_constraintTop_toBottomOf="@+id/pickuppoint" />
+
         <Button
+                android:id="@+id/accept"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg"
+                android:gravity="center"
+                android:layout_gravity="center"
                 android:text="Accept"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/accept"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="50dp"
-                android:layout_marginTop="15dp" app:layout_constraintTop_toBottomOf="@+id/textView16"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
-                android:background="@drawable/btn_bg"/>
-        <Button
-                android:text="decline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/decline"
-                android:layout_marginTop="15dp" app:layout_constraintTop_toBottomOf="@+id/textView16"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="50dp"
-                app:layout_constraintStart_toEndOf="@+id/accept" android:layout_marginStart="70dp"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
-                android:background="@drawable/btn_bg" app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintVertical_bias="1.0"/>
+                android:textColor="@color/bg2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line"
+                app:layout_constraintVertical_bias="1.0" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginTop="5dp"/>
+
+        <!--<Button-->
+                <!--android:id="@+id/decline"-->
+                <!--android:layout_width="124dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginEnd="50dp"-->
+                <!--android:layout_marginStart="70dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:background="@drawable/bg"-->
+                <!--android:text="decline"-->
+                <!--android:textColor="@color/bg2"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintHorizontal_bias="0.777"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/accept"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/line"-->
+                <!--app:layout_constraintVertical_bias="0.0" />-->
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:elevation="0dp"
+                app:cardBackgroundColor="#b0b0b0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"></android.support.v7.widget.CardView>
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

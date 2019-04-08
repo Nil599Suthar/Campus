@@ -19,24 +19,27 @@
                 android:text="I Am Driver.."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/checkBox"
-                android:textColor="#f11079"
+                android:textColor="@android:color/background_dark"
                 app:layout_constraintTop_toBottomOf="@+id/upass" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp" android:layout_marginTop="20dp" android:textSize="18sp"
                 android:textStyle="bold"/>
+
         <TextView
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="USER/Driver ID"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#000000"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
                 android:drawablePadding="5dp"
-                android:drawableRight="@drawable/ic_person_black_24dp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="10dp" android:id="@+id/textView8" android:layout_marginTop="10dp"
-                app:layout_constraintHorizontal_bias="0.085"/>
+                android:text="USER / DRIVER ID"
+                android:textColor="#c0c0c0"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.106"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
         <EditText
                 android:layout_width="321dp"
                 android:layout_height="wrap_content"
@@ -53,9 +56,7 @@
                 android:layout_height="wrap_content"
                 android:text="PASSWORD"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:drawableRight="@drawable/ic_vpn_key_black_24dp"
+                android:textColor="#c0c0c0"
                 android:drawablePadding="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="20dp"
@@ -76,16 +77,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/userlogin"
-                android:textStyle="bold"
                 android:textColor="#ffffff"
                 android:textSize="18dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/bg"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="10dp"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox" app:layout_constraintVertical_bias="0.418"/>
+
 
 
 </android.support.constraint.ConstraintLayout>

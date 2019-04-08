@@ -23,8 +23,8 @@
             android:layout_width="264dp"
             android:layout_height="wrap_content"
             android:text="Campus Traveller App"
-            android:textStyle="italic"
-            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textSize="32sp"
             android:textColor="#ffffff"
             android:id="@+id/tv" android:textAlignment="center"/>
 </LinearLayout>

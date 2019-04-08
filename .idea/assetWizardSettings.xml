@@ -66,7 +66,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%20Community%20Edition%202018.1.6/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%20Community%20Edition%202018.1.6/plugins/android/lib/android.jar!/images/material_design_icons/maps/ic_person_pin_circle_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -76,8 +76,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="a19e9c" />
-                            <entry key="outputName" value="ic_person_black_2" />
+                            <entry key="outputName" value="ic_person_pin_circle_black_24dp" />
                             <entry key="sourceFile" value="E:\Documents\Logopit_1534081965403.svg" />
                           </map>
                         </option>

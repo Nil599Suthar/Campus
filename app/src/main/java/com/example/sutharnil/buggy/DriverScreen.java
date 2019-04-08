@@ -1,6 +1,8 @@
 package com.example.sutharnil.buggy;
 
 import android.app.*;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
@@ -25,6 +27,8 @@ public class DriverScreen extends AppCompatActivity {
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
     Fragment fragment;
+    Intent mServiceIntent;
+    private Req_Noti_Service YourService;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -90,10 +94,19 @@ public class DriverScreen extends AppCompatActivity {
 
         firebaseAuth=FirebaseAuth.getInstance();
 
+
+
     }
 
 
+    @Override
+    protected void onDestroy() {
+//         mServiceIntent = new Intent(this, Req_Noti_Service.class);
 
+//        stopService(mServiceIntent);
+
+        super.onDestroy();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -107,8 +120,23 @@ public class DriverScreen extends AppCompatActivity {
 
         if (item.getItemId()==R.id.logout1){
 
-                         Singout();
-        }
+            final android.support.v7.app.AlertDialog.Builder alert=new android.support.v7.app.AlertDialog.Builder(this);
+            alert.setMessage("Do You Want To LogOut ?").setCancelable(false).setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    Singout();
+                }
+            }).setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                }
+            });
+
+            android.support.v7.app.AlertDialog alertDialog=alert.create();
+            alertDialog.show();        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -126,5 +154,11 @@ public class DriverScreen extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onStart() {
 
+        super.onStart();
+
+//        }
+    }
 }
